@@ -4,6 +4,7 @@ import com.gary.file.model.ReceiveFileModel;
 import com.gary.file.model.ResourceBlock;
 import com.gary.file.util.ByteAndStringUtil;
 import com.gary.file.view.IReceiveProgress;
+import com.gary.util.CloseableUtil;
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -119,7 +120,8 @@ public class ResourceReceiver implements Runnable {
                 e.printStackTrace();
             }
         }
-        closeReceiver();
+        CloseableUtil.close(dis, sender);
+        //closeReceiver();
     }
 
     private void closeReceiver() {

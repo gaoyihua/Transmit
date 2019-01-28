@@ -121,27 +121,5 @@ public class ResourceReceiver implements Runnable {
             }
         }
         CloseableUtil.close(dis, sender);
-        //closeReceiver();
-    }
-
-    private void closeReceiver() {
-        try {
-            if (dis != null) {
-                dis.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            dis = null;
-        }
-        try {
-            if (sender != null && !sender.isClosed()) {
-                sender.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            sender = null;
-        }
     }
 }

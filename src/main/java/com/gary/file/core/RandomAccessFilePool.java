@@ -16,6 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class RandomAccessFilePool {
     private static Map<String, ThreadLocal<RandomAccessFile>> map = new ConcurrentHashMap<>();
+
     @SuppressWarnings("unchecked")
     public static RandomAccessFile getRandomAccessFile(String filePath){
         if (!map.containsKey(filePath)) {
@@ -25,7 +26,6 @@ public class RandomAccessFilePool {
                     RandomAccessFile raf = null;
                     try {
                         raf = new RandomAccessFile(filePath, "rwd");
-                        raf.getChannel();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -33,7 +33,7 @@ public class RandomAccessFilePool {
                 }
             };
             map.put(filePath, threadLocal);
-            return  threadLocal.get();
+            return threadLocal.get();
         }
         return map.get(filePath).get();
     }

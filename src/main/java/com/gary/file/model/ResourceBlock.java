@@ -37,7 +37,6 @@ public class ResourceBlock implements Runnable {
         }
         String absoluteRootPath = receiveFileModel.getAbsoluteRootPath();
         String filePath = receiveFileModel.getFilePath();
-        long length = receiveFileModel.getLength();
 
        // RandomAccessFile raf = new RandomAccessFile(absoluteRootPath + filePath, "rwd");
         RandomAccessFile raf = RandomAccessFilePool.getRandomAccessFile(absoluteRootPath + filePath);

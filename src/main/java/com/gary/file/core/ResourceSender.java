@@ -2,6 +2,7 @@ package com.gary.file.core;
 
 import com.gary.file.model.SendFileModel;
 import com.gary.file.util.ByteAndStringUtil;
+import com.gary.util.CloseableUtil;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -92,23 +93,6 @@ public class ResourceSender implements Runnable {
     }
 
     void close() {
-        try {
-            if (dos != null) {
-                dos.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            dos = null;
-        }
-        try {
-            if (socket != null && !socket.isClosed()) {
-                socket.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            socket = null;
-        }
+        CloseableUtil.close(dos, socket);
     }
 }

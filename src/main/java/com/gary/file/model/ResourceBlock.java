@@ -1,7 +1,7 @@
 package com.gary.file.model;
 
-import com.gary.file.core.RandomAccessFilePool;
-import com.gary.file.core.ReceiveFileSet;
+import com.gary.file.core.transmit.RandomAccessFilePool;
+import com.gary.file.core.transmit.ReceiveFileSet;
 import com.gary.file.exception.ReceiveFileIdNotExistException;
 import com.gary.file.view.IReceiveProgress;
 

@@ -1,7 +1,7 @@
 package com.gary.file.view;
 
-import com.gary.file.core.ReceiveFileSet;
-import com.gary.file.core.ResourceReceiverServer;
+import com.gary.file.core.transmit.ReceiveFileSet;
+import com.gary.file.core.transmit.ResourceReceiverServer;
 import com.gary.file.model.ReceiveFileModel;
 
 import javax.swing.*;

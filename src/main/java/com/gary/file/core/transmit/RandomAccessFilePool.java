@@ -1,4 +1,4 @@
-package com.gary.file.core;
+package com.gary.file.core.transmit;
 
 import com.gary.util.CloseableUtil;
 
@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * describe:
+ * describe:RandomAccessFile缓冲池
  *
  * @author gary
  * @date 2019/01/18

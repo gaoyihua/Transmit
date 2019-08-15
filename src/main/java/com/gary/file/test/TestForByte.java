@@ -1,6 +1,9 @@
 package com.gary.file.test;
 
 import com.gary.file.util.ByteAndStringUtil;
+
+import java.util.Date;
+
 /**
  * describe:测试byte2Int、Int2byte
  *
@@ -18,7 +21,6 @@ public class TestForByte {
 		for (int index = 0; index < buffer.length; index ++) {
 			System.out.print(buffer[index] + "!");
 		}
-
 		System.out.println();
 
 		System.out.println(ByteAndStringUtil.toHex(buffer));

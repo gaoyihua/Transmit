@@ -1,8 +1,7 @@
-package com.gary.file.core;
+package com.gary.file.core.transmit;
 
 import com.gary.file.model.SendFileModel;
 
-import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.List;
 

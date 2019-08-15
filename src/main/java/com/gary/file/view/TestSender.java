@@ -1,8 +1,8 @@
 package com.gary.file.view;
 
-import com.gary.file.core.ReceiveFileSet;
-import com.gary.file.core.ResourceSender;
-import com.gary.file.core.ResourceSenderCenter;
+import com.gary.file.core.transmit.ReceiveFileSet;
+import com.gary.file.core.transmit.ResourceSender;
+import com.gary.file.core.transmit.ResourceSenderCenter;
 import com.gary.file.model.ReceiveFileModel;
 import com.gary.file.model.SendFileModel;
 

@@ -1,4 +1,4 @@
-package com.gary.file.core;
+package com.gary.file.core.transmit;
 
 import com.gary.file.exception.ReceiveFileIdDefinedException;
 import com.gary.file.model.BlockRecord;
